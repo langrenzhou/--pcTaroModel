@@ -1,0 +1,93 @@
+/* ; */
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+.logo{
+    width: 20px;
+    height: 30px;
+    margin-top: 11px;
+}
+.LogoLeft{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: aqua;
+    margin-top: 14px;
+    justify-content: space-evenly;
+}
+.login{
+    font-size: 16px;
+   
+    margin-top: 23px;
+}
+.at-tabs__item{
+    font-size: 16px;
+}
+.contentLeft{
+    width: 900px;
+
+}
+.contentRight{
+    width: 500px;
+    height: 30px;
+    background-color: blue;
+    margin-left: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+ul li{
+    list-style: none;
+}
+li{
+width: 900px;
+height: 260px;
+margin-bottom: 20px;
+background-color: rgb(245, 245, 245);
+}
+.artivles{
+    display: flex;
+}
+.artivlesLeft{
+    width: 260px;
+    height: 260px;
+  
+}
+.artivlesRight{
+    width: 560px;
+    height: 260px;
+}
+.title{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #707070;
+    font-size: 18px;
+}
+.ItemContent{
+    line-height: 22px;
+    letter-spacing: 1px;
+    width: 470px;
+    height: 66px;
+    overflow:hidden; 
+
+    text-overflow:ellipsis;
+    
+    display:-webkit-box; 
+    
+    -webkit-box-orient:vertical;
+    
+    -webkit-line-clamp:2; 
+    padding: 30px 0 0 20px;
+}
+.ItemAuthor{
+    margin-top: 32px;
+    margin-left: 20px;
+   color: #999;
+}
