@@ -73,7 +73,6 @@ background-color: rgb(245, 245, 245);
 .ItemContent{
     line-height: 22px;
     letter-spacing: 1px;
-    width: 470px;
     height: 66px;
     overflow:hidden; 
 
@@ -85,11 +84,13 @@ background-color: rgb(245, 245, 245);
     
     -webkit-line-clamp:2; 
     padding: 30px 0 0 20px;
+    font-size: 18px;
 }
 .ItemAuthor{
     margin-top: 32px;
     margin-left: 20px;
    color: #999;
+   font-size: 16px;
 }
 .at-input input {
     color: #333;
@@ -103,4 +104,34 @@ background-color: rgb(245, 245, 245);
 .at-input__title{
     font-size: 16px;
     width:56px
+}
+.at-avatar--small{
+    width:40px;
+    height:40px;
+    line-height: 40px;
+}
+li:nth-child(1){
+    margin-top: 66px;
+}
+.contentRight{
+    margin-top: 66px; 
+}
+.at-list__item .item-content__info-title{
+    font-size: 16px;
+}
+.at-list__item .item-content__info-note{
+    font-size: 10px;
+}
+h3{
+    font-size: 20px;
+    border-left: 6px solid #ee5044;
+    padding-left: 8px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.at-tab-bar__item{
+    padding:10px 12px
+}
+.at-tab-bar__title{
+    font-size: 16px;
 }

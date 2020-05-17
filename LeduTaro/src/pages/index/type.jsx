@@ -1,18 +1,19 @@
 import Taro, { Component } from "@tarojs/taro"
 import { View, Text } from '@tarojs/components'
 import axios from 'axios'
-import Contents from './content'
-import { AtTabs, AtTabsPane } from 'taro-ui'
+import { AtTabBar} from 'taro-ui'
+import '../index/index.css'
 class Type extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            current: 0,
+            current: this.$router.params.current?parseInt(this.$router.params.current):0,
             tabList: [],
             id: 6
         }
     }
     componentDidMount() {
+        
         axios.get('http://localhost:8080/type').then(res => {
             const tabList = res.data.map(item => {
                 return ({ title: item.type, id: item.id })
@@ -21,21 +22,19 @@ class Type extends Component {
         })
     }
     handleClick(e) {
-        this.setState({ current: e })
-        const id = this.state.tabList[e].id
-        this.setState({ id: id })
-
+        const types=this.state.tabList[e].id
+        Taro.navigateTo({
+            url:`/pages/index/index?types=${types}&current=${e}`
+        })
     }
     render() {
         return (
             <View style={{ width: '100%', fontSize: '16px' }}>
-                <AtTabs current={this.state.current} scroll tabList={this.state.tabList} onClick={this.handleClick.bind(this)}>
-                    {this.state.tabList.map((item, index) => (
-                        <AtTabsPane key={item.id} current={this.state.current} index={index}>
-                            <Contents types={item.id}></Contents>
-                        </AtTabsPane>
-                    ))}
-                </AtTabs>
+                <AtTabBar
+                    tabList={this.state.tabList}
+                    onClick={this.handleClick.bind(this)}
+                    current={this.state.current}
+                />
             </View>
         )
     }

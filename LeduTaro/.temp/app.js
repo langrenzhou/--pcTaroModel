@@ -42,7 +42,7 @@ class App extends Component {
   componentDidCatchError() {}
 
   config = {
-    pages: ["/pages/index/index"],
+    pages: ["/pages/index/index", "/pages/Details/details", "/pages/Anchor/anchor"],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -57,6 +57,14 @@ class App extends Component {
       path: '/pages/index/index',
       componentLoader: () => import( /* webpackChunkName: "index_index" */'./pages/index/index'),
       isIndex: true
+    }, {
+      path: '/pages/Details/details',
+      componentLoader: () => import( /* webpackChunkName: "Details_details" */'./pages/Details/details'),
+      isIndex: false
+    }, {
+      path: '/pages/Anchor/anchor',
+      componentLoader: () => import( /* webpackChunkName: "Anchor_anchor" */'./pages/Anchor/anchor'),
+      isIndex: false
     }]} customRoutes={{}} />;
   }
 
